@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Purple Rain</title>
+    <title>TheTrouper on GitHub</title>
     <style>
         body {
             background-color: black;
@@ -14,61 +14,10 @@
           height: 3px;
           border-radius: 50%;
           background-color: rgb(255, 0, 255);
-          animation: fall 5s linear infinite;
-          z-index: -1; /* move the rain behind the overlay */
+          animation: fall 3s linear infinite;
+          z-index: -1;
         }
 
-        .overlay h1 {
-          font-size: 2em;
-          margin-top: 30px;
-          font-weight: bold;
-          color: white;
-        }
-
-        .overlay-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: linear-gradient(45deg, blue, purple);
-        border: 4px solid gray;
-        padding: 20px;
-        border-radius: 20px;
-        text-align: center;
-        color: white;
-        z-index: 1;
-        }
-
-        #user-info {
-        margin-top: 50px;
-        text-align: left;
-        }
-
-        #user-info h2 {
-        font-size: 24px;
-        }
-
-        #user-info h3 {
-        margin-top: 20px;
-        font-size: 20px;
-        }
-
-        #user-info ul {
-        list-style-type: none;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding-left: 0;
-        }
-
-        #user-info li {
-        font-size: 16px;
-        margin-top: 5px;
-        }
-
-        #user-info a {
-        color: white;
-        text-decoration: underline;
-        }
         @keyframes fall {
           0% {
             transform: translate(-50px, -50px);
@@ -77,59 +26,183 @@
             transform: translate(calc(100vw + 50px), calc(100vh + 50px)) rotate(-45deg);
           }
         }
+
+		.box {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		height: 400px;
+		width: 300px;
+		background: linear-gradient(135deg, blue, purple);
+		border-radius: 20px;
+		border: 4px solid transparent;
+		animation: border-fade 2s linear infinite;
+		padding-right: 10px;
+    	padding-bottom: 10px;
+		}
+
+		.box {
+			position: absolute;
+			top: 50%;
+			padding-right: 5px;
+			height: 400px;
+			width: 300px;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: linear-gradient(135deg, #311F90, #AB47BC);
+			border: 2px solid transparent;
+			border-image: linear-gradient(to right, red, rgb(0, 255, 0), blue) 1;
+			border-image-slice: 1;
+			padding: 30px;
+			padding-right: 20px;
+    		padding-bottom: 10px;
+			border-radius: 15px;
+			box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+			z-index: 1;
+			max-width: 100%;
+			overflow: auto;
+			color: white;
+			}
+
+			.box h2 {
+			font-size: 24px;
+			margin-top: 30px;
+			color:rgb(132, 255, 155);
+			}
+
+			.box h3 {
+			font-size: 20px;
+			margin-top: 20px;
+			margin-bottom: 10px;
+			color:rgb(218, 124, 255);
+			}
+
+			.box ul {
+			margin-left: 20px;
+			color:rgb(145, 143, 255);
+			}
+
+			.box li {
+			font-size: 16px;
+			line-height: 1.5;
+			margin-bottom: 5px;
+			
+			}
+
+			.box a {
+			color: white;
+			text-decoration: underline;
+			}
+
+			.box a:hover {
+			color: #BB86FC;
+			}
+			.box::-webkit-scrollbar {
+				width: 0px;
+				background-color: #2f2f2f;
+				border-radius: 10px;
+				height: 50px;
+			}
+
+			.box::-webkit-scrollbar-thumb {
+				background-color: #007aff;
+				border-radius: 10px;
+				height: 50px;
+			}
+
+			.box::-webkit-scrollbar-thumb:hover {
+				background-color: #5fb3ff;
+				border-radius: 10px;
+			}
+
+			.box::-webkit-scrollbar-thumb:active {
+				background-color: #bbe4ff;
+				border-radius: 10px;
+			}
+
+		.title {
+		font-size: 36px;
+		font-weight: bold;
+		color: white;
+		text-align: center;
+		margin-top: 20%;
+		}
+
+        @keyframes border-fade {
+          0% {
+            border: 2px solid red;
+          }
+          33% {
+            border: 2px solid rgb(0, 255, 0);
+          }
+          66% {
+            border: 2px solid blue;
+          }
+          100% {
+            border: 2px solid red;
+          }
+        }
+
+        .title {
+          position: absolute;
+          left: 50%;
+          top: -50px;
+          transform: translateX(-50%);
+          font-size: 24px;
+          color: rgb(245, 143, 143);
+          text-align: center;
+          z-index: 2;
+        }
     </style>
 </head>
 <body>
-  <div class="overlay">
-    <div class="overlay-content">
-    <h1>TheTrouper</h1>
-    <div id="user-info">
-        <h2>Username: obvWolf</h2>
-        <h3>Who am I?</h3>
-        <ul>
-            <li>I am obvWolf, the Owner of <a href="https://discord.com/ogre">OgreDupe</a></li>
-            <li>I was previously known as WolfBro, and TheTelly</li>
-            <li>I like to build and code for my server
-                <ul>
-                    <li>I am currently learning <a href="https://github.com/SkriptLang/Skript/releases">SkriptLang</a></li>
-                    <li>And more recently I have picked up java</li>
-                    <li>I build for <a href="https://github.com/itzispyder/ItziSpyder">iPearlPvP (ImproperIssues)</a></li>
-                </ul>
-            </li>
-            <li>I have created some skripts for 1.17.1-1.19, if you find any bugs please tell me!</li>
-            <li>Skripts made with love from Texas!</li>
-        </ul>
-        <h3>Socials</h3>
-        <ul>
-            <li><strong>Discord:</strong> TheTrouper#6969</li>
-            <li><strong>YouTube:</strong> <a href="https://www.youtube.com/channel/UCHOnowgT74IMd4oruya3UOg">OgreNet Support</a></li>
-            <li><strong>Email:</strong> ogrestupeshared@gmail.com</li>
-        </ul>
-    </div>
-</div>
+	<div class="box">
+		<div class="title">TheTrouper</div>
+		<div id="user-info">
+			<h2>Username: obvWolf</h2>
+			<h3>Who am I?</h3>
+			<ul>
+				<li>I am obvWolf, the Owner of <a href="https://discord.com/ogre">OgreDupe</a></li>
+				<li>I was previously known as WolfBro, and TheTelly</li>
+				<li>I like to build and code for my server
+					<ul>
+						<li>I am currently learning <a href="https://github.com/SkriptLang/Skript/releases">SkriptLang</a></li>
+						<li>And more recently I have picked up java</li>
+						<li>I build for <a href="https://github.com/itzispyder/ItziSpyder">iPearlPvP (ImproperIssues)</a></li>
+					</ul>
+				</li>
+				<li>I have created some skripts for 1.17.1-1.19, if you find any bugs please tell me!</li>
+				<li>Skripts made with love from Texas!</li>
+			</ul>
+			<h3>Socials</h3>
+			<ul>
+				<li><strong>Discord:</strong> TheTrouper#6969</li>
+				<li><strong>YouTube:</strong> <a href="https://www.youtube.com/channel/UCHOnowgT74IMd4oruya3UOg">OgreNet Support</a></li>
+				<li><strong>Email:</strong> ogrestupeshared@gmail.com</li>
+			</ul>
+		</div>
+	</div>
+    <script>
+        function createRaindrop() {
+            const raindrop = document.createElement("div");
+            raindrop.classList.add("raindrop");
+            // Randomly set the 'left' or 'top' CSS property
+            if (Math.random() < 0.5) {
+                raindrop.style.left = `${Math.random() * window.innerWidth}px`;
+            } else {
+                raindrop.style.top = `${Math.random() * window.innerHeight}px`;
+            }
+            document.body.appendChild(raindrop);
+            // Remove raindrop after 10 seconds
+            setTimeout(() => {
+                raindrop.remove();
+            }, 10000);
+        }
 
-  </div>
-
-  <script>
-    function createRaindrop() {
-      const raindrop = document.createElement("div");
-      raindrop.classList.add("raindrop");
-      // Randomly set the 'left' or 'top' CSS property
-      if (Math.random() < 0.5) {
-          raindrop.style.left = `${Math.random() * window.innerWidth}px`;
-      } else {
-          raindrop.style.top = `${Math.random() * window.innerHeight}px`;
-      }
-      document.body.appendChild(raindrop);
-      // Remove raindrop after 10 seconds
-      setTimeout(() => {
-          raindrop.remove();
-      }, 10000);
-    }
-
-    setInterval(() => {
-        createRaindrop();
-    }, 5);
-  </script>
+        setInterval(() => {
+            createRaindrop();
+        }, 5);
+    </script>
 </body>
 </html>
