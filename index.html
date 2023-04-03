@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TheTrouper on GitHub</title>
+    <title>TheTrouper | obvWolf</title>
     <style>
         body {
             background-color: black;
@@ -40,6 +40,7 @@
 		animation: border-fade 2s linear infinite;
 		padding-right: 10px;
     	padding-bottom: 10px;
+		cursor: move;
 		}
 
 		.box {
@@ -54,7 +55,7 @@
 			border: 2px solid transparent;
 			border-image: linear-gradient(to right, red, rgb(0, 255, 0), blue) 1;
 			border-image-slice: 1;
-			padding: 30px;
+			padding: 20px;
 			padding-right: 20px;
     		padding-bottom: 10px;
 			border-radius: 15px;
@@ -63,6 +64,7 @@
 			max-width: 100%;
 			overflow: auto;
 			color: white;
+			cursor: move;
 			}
 
 			.box h2 {
@@ -155,31 +157,32 @@
           z-index: 2;
         }
     </style>
+	<link rel="icon" href="https://s.namemc.com/2d/skin/face.png?id=c5c129fb04e05c3a&amp;scale=4" type="image/png">
 </head>
 <body>
 	<div class="box">
-		<div class="title">TheTrouper</div>
+		<div class="title" style="font-family: Lucida Console;">TheTrouper</div>
 		<div id="user-info">
-			<h2>Username: obvWolf</h2>
-			<h3>Who am I?</h3>
+			<h2 style="font-family: Bahnschrift;">Username: obvWolf</h2>
+			<h3 style="font-family: Verdana;">Who am I?</h3>
 			<ul>
-				<li>I am obvWolf, the Owner of <a href="https://discord.com/ogre">OgreDupe</a></li>
-				<li>I was previously known as WolfBro, and TheTelly</li>
-				<li>I like to build and code for my server
+				<li style="font-family: Verdana;">I am obvWolf, the Owner of <a href="https://discord.com/ogre">OgreDupe</a></li>
+				<li style="font-family: Verdana;">I was previously known as WolfBro, and TheTelly</li>
+				<li style="font-family: Verdana;">I like to build and code for my server
 					<ul>
-						<li>I am currently learning <a href="https://github.com/SkriptLang/Skript/releases">SkriptLang</a></li>
-						<li>And more recently I have picked up java</li>
-						<li>I build for <a href="https://github.com/itzispyder/ItziSpyder">iPearlPvP (ImproperIssues)</a></li>
+						<li style="font-family: Verdana;">I am currently learning <a href="https://github.com/SkriptLang/Skript/releases">SkriptLang</a></li>
+						<li style="font-family: Verdana;">And more recently I have picked up java</li>
+						<li style="font-family: Verdana;">I build for <a href="https://github.com/itzispyder/ItziSpyder">iPearlPvP (ImproperIssues)</a></li>
 					</ul>
 				</li>
-				<li>I have created some skripts for 1.17.1-1.19, if you find any bugs please tell me!</li>
-				<li>Skripts made with love from Texas!</li>
+				<li style="font-family: Verdana;">I have created some skripts for 1.17.1-1.19, if you find any bugs please tell me!</li>
+				<li style="font-family: Verdana;">Skripts made with love from Texas!</li>
 			</ul>
-			<h3>Socials</h3>
+			<h3 style="font-family: Verdana;">Socials</h3>
 			<ul>
-				<li><strong>Discord:</strong> TheTrouper#6969</li>
-				<li><strong>YouTube:</strong> <a href="https://www.youtube.com/channel/UCHOnowgT74IMd4oruya3UOg">OgreNet Support</a></li>
-				<li><strong>Email:</strong> ogrestupeshared@gmail.com</li>
+				<li style="font-family: Verdana;"><strong>Discord:</strong> TheTrouper#6969</li>
+				<li style="font-family: Verdana;"><strong>YouTube:</strong> <a href="https://www.youtube.com/channel/UCHOnowgT74IMd4oruya3UOg">OgreNet Support</a></li>
+				<li style="font-family: Verdana;"><strong>Email:</strong> ogrestupeshared@gmail.com</li>
 			</ul>
 		</div>
 	</div>
@@ -203,6 +206,29 @@
         setInterval(() => {
             createRaindrop();
         }, 5);
+		const box = document.querySelector('.box');
+		let isDragging = false;
+		let mouseOffset = { x: 0, y: 0 };
+
+		// When mouse button is pressed down on the box, set isDragging to true and calculate the mouse offset from the box's top-left corner
+		box.addEventListener('mousedown', function(event) {
+			isDragging = true;
+			mouseOffset.x = event.clientX - box.offsetLeft;
+			mouseOffset.y = event.clientY - box.offsetTop;
+		});
+
+		// When the mouse button is released, set isDragging to false
+		document.addEventListener('mouseup', function(event) {
+			isDragging = false;
+		});
+
+		// When the mouse is moved, check if the box is being dragged, and if so, move the box by setting its top and left styles
+		document.addEventListener('mousemove', function(event) {
+			if (isDragging) {
+			box.style.left = `${event.clientX - mouseOffset.x}px`;
+			box.style.top = `${event.clientY - mouseOffset.y}px`;
+			}
+		});
     </script>
 </body>
 </html>
