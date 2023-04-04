@@ -3,6 +3,87 @@
 <head>
     <title>TheTrouper | obvWolf</title>
     <style>
+      #overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #000;
+          opacity: 1;
+          transition: opacity 0.5s ease-in-out;
+          z-index: 9999;
+        }
+
+        #summon-button {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 200px;
+          height: 80px;
+          background-color: transparent;
+          border: 2px solid #ffffff;
+          border-radius: 10px;
+          color: #000000;
+          font-size: 24px;
+          text-align: center;
+          cursor: pointer;
+          overflow: hidden;
+          animation: rgb-fade 5s ease-in-out infinite;
+        }
+
+        #summon-button span {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          padding: 10px;
+          box-sizing: border-box;
+        }
+
+        #summon-button.active {
+          animation: fill 1s ease-in-out forwards;
+        }
+
+        @keyframes fill {
+          0% {
+            background-color: rgb(255, 0, 0);
+          }
+          33% {
+            background-color: rgb(0, 255, 0);
+          }
+          66% {
+            background-color: rgb(0, 0, 255);
+          }
+          100% {
+            background-color: rgb(255, 0, 0);
+          }
+        }
+        @keyframes rgb-fade {
+          0% {
+            background-color: rgb(255, 109, 109);
+          }
+          33% {
+            background-color: rgb(107, 255, 107);
+          }
+          66% {
+            background-color: rgb(121, 121, 255);
+          }
+          100% {
+            background-color: rgb(255, 121, 121);
+          }
+        }
+
+        #main-content {
+          display: none;
+        }
+
+        #overlay.hidden {
+          opacity: 0;
+          pointer-events: none;
+        }
+
+
         body {
             background-color: black;
             overflow: hidden;
@@ -160,6 +241,11 @@
 	<link rel="icon" href="https://s.namemc.com/2d/skin/face.png?id=c5c129fb04e05c3a&amp;scale=4" type="image/png">
 </head>
 <body>
+  <div id="overlay">
+    <button id="summon-button">
+      <span>/summon obvWolf</span>
+    </button>
+  </div>
 	<div class="box">
 		<div class="title" style="font-family: Lucida Console;">TheTrouper</div>
 		<div id="user-info">
@@ -229,6 +315,20 @@
 			box.style.top = `${event.clientY - mouseOffset.y}px`;
 			}
 		});
+    const overlay = document.getElementById('overlay');
+    const summonButton = document.getElementById('summon-button');
+    const mainContent = document.getElementById('main-content');
+    const audio = new Audio('music.wav');
+
+    summonButton.addEventListener('click', function() {
+      summonButton.classList.add('active');
+      audio.volume = 0.1;
+      audio.play();
+      setTimeout(function() {
+        overlay.classList.add('hidden');
+        mainContent.style.display = 'block';
+      }, 1000); // set the delay to match the duration of the animation
+    });
     </script>
 </body>
 </html>
