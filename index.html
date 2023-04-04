@@ -108,14 +108,86 @@
           }
         }
 
+		
+		.discord {
+		position: absolute;
+		top: 50%;
+		left: 2%;
+		transform: translate(-1%, -50%);
+		height: 500px;
+		width: 350px;
+		background: linear-gradient(135deg, #311F90, #AB47BC);
+		border-radius: 20px;
+		border: 4px solid transparent;
+		animation: border-fade 2s linear infinite;
+		padding-right: 10px;
+		padding-top: 10px;
+    	padding-bottom: 10px;
+		padding-left: 10px;
+		cursor: move;
+		}
+		.socialsDiscord {
+		position: absolute;
+		top: 20%;
+		left: 68%;
+		transform: translate(-1%, -50%);
+		height: 200px;
+		width: 350px;
+		background: linear-gradient(135deg, #311F90, #AB47BC);
+		border-radius: 20px;
+		border: 4px solid transparent;
+		animation: border-fade 2s linear infinite;
+		color: white;
+		padding-right: 10px;
+		padding-top: 10px;
+    	padding-bottom: 10px;
+		padding-left: 10px;
+		cursor: move;
+		}
+		.socialsYoutube {
+		position: absolute;
+		top: 50%;
+		left: 68%;
+		transform: translate(-1%, -50%);
+		height: 200px;
+		width: 350px;
+		background: linear-gradient(135deg, #311F90, #AB47BC);
+		border-radius: 20px;
+		border: 4px solid transparent;
+		animation: border-fade 2s linear infinite;
+		color: white;
+		padding-right: 10px;
+		padding-top: 10px;
+    	padding-bottom: 10px;
+		padding-left: 10px;
+		cursor: move;
+		}
+		.socialsOther {
+		position: absolute;
+		top: 80%;
+		left: 68%;
+		transform: translate(-1%, -50%);
+		height: 200px;
+		width: 350px;
+		background: linear-gradient(135deg, #311F90, #AB47BC);
+		border-radius: 20px;
+		border: 4px solid transparent;
+		animation: border-fade 2s linear infinite;
+		color: white;
+		padding-right: 10px;
+		padding-top: 10px;
+    	padding-bottom: 10px;
+		padding-left: 10px;
+		cursor: move;
+		}
 		.box {
 		position: absolute;
 		top: 50%;
-		left: 50%;
+		left: 20%;
 		transform: translate(-50%, -50%);
-		height: 400px;
+		height: 540px;
 		width: 300px;
-		background: linear-gradient(135deg, blue, purple);
+		background: linear-gradient(135deg, #311F90, #AB47BC);
 		border-radius: 20px;
 		border: 4px solid transparent;
 		animation: border-fade 2s linear infinite;
@@ -123,15 +195,14 @@
     	padding-bottom: 10px;
 		cursor: move;
 		}
-
 		.box {
 			position: absolute;
 			top: 50%;
 			padding-right: 5px;
-			height: 400px;
+			height: 540px;
 			width: 300px;
-			left: 50%;
-			transform: translate(-50%, -50%);
+			left: 38%;
+			transform: translate(-10%, -50%);
 			background: linear-gradient(135deg, #311F90, #AB47BC);
 			border: 2px solid transparent;
 			border-image: linear-gradient(to right, red, rgb(0, 255, 0), blue) 1;
@@ -143,9 +214,9 @@
 			box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
 			z-index: 1;
 			max-width: 100%;
+			cursor: move;
 			overflow: auto;
 			color: white;
-			cursor: move;
 			}
 
 			.box h2 {
@@ -245,15 +316,41 @@
     <button id="summon-button">
       <span>/summon obvWolf</span>
     </button>
-  </div>
+    </div>
+	<div class ="discord">
+		<iframe src="https://discord.com/widget?id=916101986779299942&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+	</div>
+	<div class ="socialsYoutube">
+		<h3 style="font-family: Verdana;">YouTube</h3>
+			<ul>
+				<li style="font-family: Verdana;"><strong>YouTube:</strong> <a href="https://www.youtube.com/channel/UCHOnowgT74IMd4oruya3UOg">OgreNet Support</a></li>
+				<li style="font-family: Verdana;"><strong>Email:</strong> ogrestupeshared@gmail.com</li>
+				<img src="youtube.png">
+			</ul>
+	</div>
+	<div class ="socialsDiscord">
+		<h3 style="font-family: Verdana;">Discord</h3>
+			<ul>
+				<li style="font-family: Verdana;"><strong>Want to chat?</strong></li>
+				<li style="font-family: Verdana;"><strong>My tag is: </strong> <a href="https://discord.gg/ogre">TheTrouper#6969</a></li>
+				<h3> </h3>
+				<img src="discord.png">
+			</ul>
+	</div>
+	<div class ="socialsOther">
+		<h3 style="font-family: Verdana;">Contact</h3>
+			<ul>
+				<li style="font-family: Verdana;"><strong>Github:</strong> <a href="https://github.com/thetrouper/">@thetrouper</a></li>
+				<li style="font-family: Verdana;"><strong>Email:</strong> ogrestupeshared@gmail.com</li>
+			</ul>
+	</div>
 	<div class="box">
 		<div class="title" style="font-family: Lucida Console;">TheTrouper</div>
 		<div id="user-info">
 			<h2 style="font-family: Bahnschrift;">Username: obvWolf</h2>
 			<h3 style="font-family: Verdana;">Who am I?</h3>
 			<ul>
-				<li style="font-family: Verdana;">I am obvWolf, the Owner of <a href="https://discord.com/ogre">OgreDupe</a></li>
-				<li style="font-family: Verdana;">I was previously known as WolfBro, and TheTelly</li>
+				<li style="font-family: Verdana;">I am obvWolf, the Owner of <a href="https://discord.gg/ogre">OgreDupe</a></li>
 				<li style="font-family: Verdana;">I like to build and code for my server
 					<ul>
 						<li style="font-family: Verdana;">I am currently learning <a href="https://github.com/SkriptLang/Skript/releases">SkriptLang</a></li>
@@ -264,13 +361,8 @@
 				<li style="font-family: Verdana;">I have created some skripts for 1.17.1-1.19, if you find any bugs please tell me!</li>
 				<li style="font-family: Verdana;">Skripts made with love from Texas!</li>
 			</ul>
-			<h3 style="font-family: Verdana;">Socials</h3>
-			<ul>
-				<li style="font-family: Verdana;"><strong>Discord:</strong> TheTrouper#6969</li>
-				<li style="font-family: Verdana;"><strong>YouTube:</strong> <a href="https://www.youtube.com/channel/UCHOnowgT74IMd4oruya3UOg">OgreNet Support</a></li>
-				<li style="font-family: Verdana;"><strong>Email:</strong> ogrestupeshared@gmail.com</li>
-			</ul>
 		</div>
+		
 	</div>
     <script>
         function createRaindrop() {
@@ -292,29 +384,9 @@
         setInterval(() => {
             createRaindrop();
         }, 5);
-		const box = document.querySelector('.box');
-		let isDragging = false;
-		let mouseOffset = { x: 0, y: 0 };
 
-		// When mouse button is pressed down on the box, set isDragging to true and calculate the mouse offset from the box's top-left corner
-		box.addEventListener('mousedown', function(event) {
-			isDragging = true;
-			mouseOffset.x = event.clientX - box.offsetLeft;
-			mouseOffset.y = event.clientY - box.offsetTop;
-		});
 
-		// When the mouse button is released, set isDragging to false
-		document.addEventListener('mouseup', function(event) {
-			isDragging = false;
-		});
 
-		// When the mouse is moved, check if the box is being dragged, and if so, move the box by setting its top and left styles
-		document.addEventListener('mousemove', function(event) {
-			if (isDragging) {
-			box.style.left = `${event.clientX - mouseOffset.x}px`;
-			box.style.top = `${event.clientY - mouseOffset.y}px`;
-			}
-		});
     const overlay = document.getElementById('overlay');
     const summonButton = document.getElementById('summon-button');
     const mainContent = document.getElementById('main-content');
@@ -329,6 +401,51 @@
         mainContent.style.display = 'block';
       }, 1000); // set the delay to match the duration of the animation
     });
+
+
+	// Make the box element draggable:
+	function makeElementDraggable(element) {
+  let isDragging = false;
+  let mouseOffset = { x: 0, y: 0 };
+
+  // When mouse button is pressed down on the element, set isDragging to true and calculate the mouse offset from the element's top-left corner
+  element.addEventListener('mousedown', function(event) {
+    isDragging = true;
+    mouseOffset.x = event.clientX - element.offsetLeft;
+    mouseOffset.y = event.clientY - element.offsetTop;
+  });
+
+  // When the mouse button is released, set isDragging to false
+  document.addEventListener('mouseup', function(event) {
+    isDragging = false;
+  });
+
+  // When the mouse is moved, check if the element is being dragged, and if so, move the element by setting its top and left styles
+  document.addEventListener('mousemove', function(event) {
+    if (isDragging) {
+      element.style.left = `${event.clientX - mouseOffset.x}px`;
+      element.style.top = `${event.clientY - mouseOffset.y}px`;
+    }
+  });
+}
+
+// Call the function for each draggable element
+const box = document.querySelector('.box');
+makeElementDraggable(box);
+
+const widget = document.querySelector('.discord');
+makeElementDraggable(widget);
+
+const youtube = document.querySelector('.socialsYoutube');
+makeElementDraggable(youtube);
+
+const discord = document.querySelector('.socialsDiscord');
+makeElementDraggable(discord);
+
+const other = document.querySelector('.socialsOther');
+makeElementDraggable(other);
+
+
     </script>
 </body>
 </html>
