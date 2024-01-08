@@ -1,0 +1,52 @@
+#background {
+    background-color: #1d243e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -69;
+}
+::-webkit-scrollbar {
+    display: none;
+} 
+.credit {
+    color: rgb(15, 53, 248);
+}
+.box {
+    border-radius: 7px;
+    background: linear-gradient(-45deg, rgb(94, 255, 102), rgb(66, 211, 255));
+    animation: borderAnimation 3s linear infinite;
+    font-family: 'JetBrains Mono';
+    transition: 'background' 0.3s ease;
+    border: 5px solid;
+}
+.box:hover {
+    background: linear-gradient(-45deg, rgb(163, 255, 168), rgb(159, 233, 255));
+}       
+@keyframes borderAnimation {
+    0% {
+        border-color: rgb(0, 255, 255);
+    }
+    33% {
+        border-color: rgb(255, 0, 255);
+    }
+    66% {
+        border-color: rgb(255, 255, 0);
+    }
+    100% {
+        border-color: rgb(0, 255, 255);
+    }
+}
+#centered {
+    width: 500px;
+    margin: auto;
+    margin-top: 20%;
+    text-align: center;
+}
+.skip-button {
+    background-color: #22ff38;
+    color: rgb(255, 18, 18)000;
+    animation: borderAnimation 0.5s linear infinite;
+    border: 2px solid;
+    padding: 1px 10px;
+    cursor: pointer;
+}
